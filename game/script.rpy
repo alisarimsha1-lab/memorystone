@@ -9354,7 +9354,9 @@ label start:
         "Она лежит у ножки стола."
         "Я быстро надеваю ее, ощущая на коже холод шелка."
         "Подхожу к вешалке у двери и снимаю кожаную куртку."
+        show k_naked at almostsize, right with dissolve1
         k "Уже сбегаешь."
+        hide k_naked with dissolve1
         "Его голос, хриплый от сна, заставляет меня замереть на месте. Я оборачиваюсь."
         "Он стоит в дверном проеме в спальню, в брюках, с обнаженным торсом. Утренний свет подчеркивает рельеф его мышц, а на коже у ключицы проступают легкие, едва заметные синяки."
         show loran_black1 at ssssss, left with dissolve1
@@ -9362,13 +9364,17 @@ label start:
         hide loran_black1 with dissolve1
         "Его взгляд на мгновение скользит к моему рюкзаку, валявшемуся в углу."
         "Он проводит рукой по волосам и двигается вглубь гостиной."
+        show k_naked at almostsize, right with dissolve1
         k "Будешь кофе?"
+        hide k_naked with dissolve1
         "Вопрос повисает в воздухе. Такой простой и бытовой, и от этого сбивающий с толку. Я замешкалась."
         show loran_black1 at ssssss, left with dissolve1
         l "Да. Без сахара."
         hide loran_black1 with dissolve1
         "Я все еще стою у двери, наблюдая за ним. Он оборачивается, и уголок его губ дрогнул."
+        show k_naked at almostsize, right with dissolve1
         k "Я понял. Иди кури."
+        hide k_naked with dissolve1
         "В его тоне нет раздражения, лишь легкая, уставшая снисходительность. Это… неловко. И непривычно."
         scene kameron_house_night with fade
         "Я дергаю ручку двери и выхожу на крыльцо, вдыхая воздух, пахнущий хвоей и влажной землей. Сажусь на прохладные ступеньки, достаю сигарету."
@@ -10440,7 +10446,9 @@ label start:
         "Она лежит у ножки стола."
         "Я быстро надеваю ее, ощущая на коже холод шелка."
         "Подхожу к вешалке у двери и снимаю кожаную куртку."
+        show k_naked at almostsize, right with dissolve1
         k "Уже сбегаешь."
+        hide k_naked with dissolve1
         "Его голос, хриплый от сна, заставляет меня замереть на месте. Я оборачиваюсь."
         "Он стоит в дверном проеме в спальню, в брюках, с обнаженным торсом. Утренний свет подчеркивает рельеф его мышц, а на коже у ключицы проступают легкие, едва заметные синяки."
         show loran_black1 at ssssss, left with dissolve1
@@ -10448,13 +10456,17 @@ label start:
         hide loran_black1 with dissolve1
         "Его взгляд на мгновение скользит к моему рюкзаку, валявшемуся в углу."
         "Он проводит рукой по волосам и двигается вглубь гостиной."
+        show k_naked at almostsize, right with dissolve1
         k "Будешь кофе?"
+        hide k_naked with dissolve1
         "Вопрос повисает в воздухе. Такой простой и бытовой, и от этого сбивающий с толку. Я замешкалась."
         show loran_black1 at ssssss, left with dissolve1
         l "Да. Без сахара."
         hide loran_black1 with dissolve1
         "Я все еще стою у двери, наблюдая за ним. Он оборачивается, и уголок его губ дрогнул."
+        show k_naked at almostsize, right with dissolve1
         k "Я понял. Иди кури."
+        hide k_naked with dissolve1
         "В его тоне нет раздражения, лишь легкая, уставшая снисходительность. Это… неловко. И непривычно."
         scene kameron_house_night with fade
         "Я дергаю ручку двери и выхожу на крыльцо, вдыхая воздух, пахнущий хвоей и влажной землей. Сажусь на прохладные ступеньки, достаю сигарету."
@@ -10767,9 +10779,9 @@ label start:
 
         "Лес поглощает меня. Ветви хлещут по лицу, цепляются за кожу, как упреки. Я бегу, не чувствуя ног. Ноги — не мои. Руки — не мои. Это конечности автомата, ведомого проклятой памятью."
         
-        show loran_1 at size, left with dissolve1
+        show loran_blackr1 at ssssss, left with dissolve1
         l "”Здесь.”"
-        hide loran_1 with dissolve1
+        hide loran_blackr1 with dissolve1
         "Старая сосна. Его корни, будто скрюченные пальцы, вцепились в склон."
         "Под одним из них — камень."
         "Я бросаюсь на колени. Земля ледяная, но я не чувствую холода. Лишь зуд под кожей."
@@ -10796,9 +10808,9 @@ label start:
 
         "И тогда, держа в руках орудие своих преступлений, я наконец слышу ту самую, окончательную правду, что все это время шептало мое подсознание:"
         
-        show loran_4 at size, left with dissolve1
+        show loran_blackr4 at ssssss, left with dissolve1
         l "”Я не жертва. Я — монстр.”"
-        hide loran_4 with dissolve1
+        hide loran_blackr4 with dissolve1
         "Сзади раздается хруст ветки. Тяжелые, размеренные шаги."
         "Я не оборачиваюсь. Я не могу позволить ему увидеть мое лицо сейчас."
         "Я просто сижу на коленях в грязи, сжимая в окровавленных пальцах нож."
@@ -10808,13 +10820,13 @@ label start:
         "Я буду гнить в камере. Кэмерон запрет меня."
 
         
-        show loran_2 at size, left with dissolve1
+        show loran_blackr2 at ssssss, left with dissolve1
         l "”Он не поймет. Не будет разбираться в этом или вовсе отвернется от меня.”"
-        hide loran_2 with dissolve1
+        hide loran_blackr2 with dissolve1
         "Но в голове что-то щелкает."
-        show loran_2 at size, left with dissolve1
+        show loran_blackr2 at ssssss, left with dissolve1
         l "”Никогда. Никогда не будь слабой.”"
-        hide loran_2 with dissolve1
+        hide loran_blackr2 with dissolve1
         "Я резко разворачиваюсь."
         "Нож в руке начинает гореть."
         "Не знаю, на что рассчитываю. Знаю лишь — не могу позволить ему надеть наручники."
@@ -10825,82 +10837,82 @@ label start:
         "Его руки смыкаются на моем запястье, выкручивая его. Боль пронзает до локтя, и нож с глухим стуком падает в грязь. Он прижимает меня к себе спиной, его дыхание обжигает шею."
         "Сжимает меня так, что дышать невозможно."
 
-        show k__3 at sizee, right with dissolve1
+        show k__3r at sizee, right with dissolve1
         k "Да вы, блять, все издеваетесь надо мной?!"
-        hide k__3 with dissolve1
+        hide k__3r with dissolve1
         "Я даже не замечаю, что начинаю улыбаться."
-        show k__3 at sizee, right with dissolve1
+        show k__3r at sizee, right with dissolve1
         k "Что из сказанных твоих слов мне было правдой?"
         k "Наслаждалась тем, что я хотел услышать?"
-        hide k__3 with dissolve1
-        show loran_5 at size, left with dissolve1
+        hide k__3r with dissolve1
+        show loran_blackr5 at size, left with dissolve1
         l "Что такое? Пригрел змею на груди, Кэми?"
-        hide loran_5 with dissolve1
+        hide loran_blackr5 with dissolve1
         "Его рука сжимает меня так, что у меня перехватывает дыхание. Теперь в этом жесте я вижу гнев."
-        show k__3 at sizee, right with dissolve1
+        show k__3r at sizee, right with dissolve1
         k "Заткнись."
         k "С чего ты вообще взяла, что стала для меня кем-то важным?"
-        hide k__3 with dissolve1
+        hide k__3r with dissolve1
         "Его слова ранят больнее удара. Больнее его рук, которые сжимают мое горло и руки."
-        show loran_1 at size, left with dissolve1
+        show loran_blackr1 at ssssss, left with dissolve1
         l "Не ври себе."
         l "То, что было между нами… значило для тебя многое."
         l "”...И для меня.”"
-        hide loran_1 with dissolve1
+        hide loran_blackr1 with dissolve1
         "Я слышу болезненный смех Кэмерона, от чего внутри все сжимается."
-        show k__3 at sizee, right with dissolve1
+        show k__3r at sizee, right with dissolve1
         k "Даже если что-то и было — оно стерлось, когда ты попыталась убить меня."
-        hide k__3 with dissolve1
-        show loran_2 at size, left with dissolve1
+        hide k__3r with dissolve1
+        show loran_blackr2 at ssssss, left with dissolve1
         l "Я не хочу тебя убивать!"
         l "Ты слишком много на себя берешь. Ты мне даже другом не стал."
         l "”Ты стал для меня большим.”" 
         l "Дай мне уйти!"
-        hide loran_2 with dissolve1
+        hide loran_blackr2 with dissolve1
         "Я слышу болезненный смех Кэмерона, от чего внутри все сжимается."
-        show k__3 at sizee, right with dissolve1
+        show k__3r at sizee, right with dissolve1
         k "Закрой. Свой. Рот."
-        hide k__3 with dissolve1
+        hide k__3r with dissolve1
         "Я бьюсь в хватке, бью каблуком ботинка в его голень."
         "Хватка на секунду ослабевает, и я дергаюсь."
         "Мы падаем в грязь. Не изящно, не как в бою, а как звери."
         "Я царапаю ему лицо, мои ногти оставляют красные полосы на щеке, которую я целовала прошлой ночью."
         "Он ловит мою руку, заламывает ее за спину. Боль пронзает плечо."
-        show k__3 at sizee, right with dissolve1
+        show k__3r at sizee, right with dissolve1
         k "Прекрати!"
-        hide k__3 with dissolve1
+        hide k__3r with dissolve1
         "Его рык полон отчаяния."
-        show k__3 at sizee, right with dissolve1
+        show k__3r at sizee, right with dissolve1
         k "Не заставляй меня…"
-        hide k__3 with dissolve1
-        show loran_5 at size, left with dissolve1
+        hide k__3r with dissolve1
+        show loran_blackr5 at size, left with dissolve1
         l "Что? Сломать мне руку?"
-        hide loran_5 with dissolve1
+        hide loran_blackr5 with dissolve1
         "Я шиплю, делая резкий выпад головой назад. Макушка встречается с его носом, и он снова ослабляет хватку."
         "Я не слышу крик, но вырывается его мычание, полное боли, что заставляет его отшатнуться. От этого звука мне становится физически плохо."
         "Использую этот момент, чтоб перевернуться и ударить его коленом в пах."
-        show k__3 at sizee, right with dissolve1
+        show k__3r at sizee, right with dissolve1
         k "Я бы помог тебе!"
-        hide k__3 with dissolve1
+        hide k__3r with dissolve1
         "Из его носа льется кровь. Сердце сжимается."
-        show loran_3 at size, left with dissolve1
+        show loran_blackr2 at ssssss, left with dissolve1
         l "Я не сломанная игрушка, которую надо чинить!"
-        hide loran_3 with dissolve1
+        hide loran_blackr2 with dissolve1
         "Мы оба встаем с земли. Дождь смывает кровь с его лица, но не может смыть боль."
-        show k__1 at sizee, right with dissolve1
+        show k__1r at sizee, right with dissolve1
         k "Хватит, Лоран."
         k "Это конец."
-        hide k__1 with dissolve1
+        hide k__1r with dissolve1
         "Он медленно тянется к кобуре на бедре."
         "Щелчок предохранителя режет звуки дождя."
         "Кэмерон наставляет на меня дуло пистолета."
-        show loran_5 at size, left with dissolve1
+        show loran_blackr5 at ssssss, left with dissolve1
         l "Собираешься застрелить меня, Кэми?"
-        hide loran_5 with dissolve1
+        hide loran_blackr5 with dissolve1
         "Мой голос звучит странно спокойно. Во всем теле — приятная, густая вата."
-        show loran_1 at size, left with dissolve1
+        show loran_blackr1 at ssssss, left with dissolve1
         l "После всего?"
-        hide loran_1 with dissolve1
+        hide loran_blackr1 with dissolve1
         "Он не отвечает. Его рука не дрожит. В глазах — ад. Ад, который разожгла я."
         "Мы стоим напротив друг друга, покрытые кровью. И я понимаю — мы убили друг друга задолго до этого момента. Просто не хотели опознавать трупы."
         "И в этот миг во мне что-то окончательно отмирает."
@@ -11277,9 +11289,9 @@ label start:
 
         "И тогда, держа в руках орудие своих преступлений, я наконец слышу ту самую, окончательную правду, что все это время шептало мое подсознание:"
         
-        show loran_4 at size, left with dissolve1
+        show loran_blackr4 at ssssss, left with dissolve1
         l "”Я не жертва. Я — монстр.”"
-        hide loran_4 with dissolve1
+        hide loran_blackr4 with dissolve1
         "Сзади раздается хруст ветки. Тяжелые, размеренные шаги."
         "Я не оборачиваюсь. Понимала, что он найдет меня."
         "Я просто сижу на коленях в грязи, сжимая в окровавленных пальцах нож."
@@ -11683,9 +11695,9 @@ label start:
 
         "И тогда, держа в руках орудие своих преступлений, я наконец слышу ту самую, окончательную правду, что все это время шептало мое подсознание:"
         
-        show loran_4 at size, left with dissolve1
+        show loran_blackr4 at ssssss, left with dissolve1
         l "”Я не жертва. Я — монстр.”"
-        hide loran_4 with dissolve1
+        hide loran_blackr4 with dissolve1
         "Сзади раздается хруст ветки. Тяжелые, размеренные шаги."
         "Я не оборачиваюсь. Понимала, что он найдет меня."
         "Я просто сижу на коленях в грязи, сжимая в окровавленных пальцах нож."
@@ -11695,9 +11707,9 @@ label start:
         "Я буду гнить в камере. Кэмерон оставит меня гнить в камере."
         "Я останусь одна."
         "Но что-то щелкает. Глухой, костяной щелчок в виске."
-        show loran_2 at size, left with dissolve1
+        show loran_blackr2 at ssssss, left with dissolve1
         l "”Никогда. Никогда не будь слабой.”"
-        hide loran_2 with dissolve1
+        hide loran_blackr2 with dissolve1
         "Я резко разворачиваюсь. Лезвие ножа блестит в скупом свете."
         "Не знаю, на что рассчитываю. Знаю лишь — не могу позволить ему надеть наручники."
         "Я делаю выпад, целясь рукоятью в висок."
@@ -11705,38 +11717,38 @@ label start:
         "У меня лишь секунда."
         "Но его тело срабатывает быстрее мысли. Автомат, выдрессированный годами."
         "Его руки смыкаются на моем запястье, выкручивая его. Боль пронзает до локтя, и нож с глухим стуком падает в грязь. Он прижимает меня к себе спиной, его дыхание обжигает кожу шеи."
-        show k__3 at sizee, right with dissolve1
+        show k_1r at sizee, right with dissolve1
         k "Я знал это с самого начала."
-        hide k__3 with dissolve1
+        hide k_1r with dissolve1
         "Его голос у меня над ухом, сдавленный, чуждый. В нем нет гнева. Лишь нарастающее ужасом понимание."
-        show k__3 at sizee, right with dissolve1
+        show k_1r at sizee, right with dissolve1
         k "Пыталась водить меня за нос, змея?"
-        hide k__3 with dissolve1
-        show loran_3 at size, left with dissolve1
+        hide k_1r with dissolve1
+        show loran_blackr4 at ssssss, left with dissolve1
         l "Отпусти меня!"
-        hide loran_3 with dissolve1
+        hide loran_blackr4 with dissolve1
         "Его рука сжимает меня так, что ребра вот-вот треснут, выживая воздух из легких. И теперь в этом жесте — настоящая, дикая ярость."
-        show k__3 at sizee, right with dissolve1
+        show k_1r at sizee, right with dissolve1
         k "Заткнись."
-        hide k__3 with dissolve1
+        hide k_1r with dissolve1
         "Я бьюсь, и удаляю каблуком ботинка в голень. Хватка на секунду ослабевает — я дергаюсь."
         "Мы падаем в грязь. Не изящно, не как в бою. А как звери, раздирающие друг друга в грязной яме."
         "Я царапаю ему лицо, мои ногти оставляют красные полосы на щеке."
         "Он ловит мою руку, с хрустом заламывая ее за спину. Боль пронзает плечо."
         "Я шиплю, делая резкий выпад головой назад. Макушка встречается с его носом, и он снова ослабляет хватку."
         "Его хватка снова ослабевает, и раздается сдавленное мычание, полное боли и ярости. Я использую этот миг, чтобы перевернуться и ударить коленом в пах. Моя рука снова находит рукоять ножа."
-        show loran_3 at size, left with dissolve1
+        show loran_blackr1 at ssssss, left with dissolve1
         l "Дай мне уйти!"
-        hide loran_3 with dissolve1
+        hide loran_blackr1 with dissolve1
         "Из его разбитого носа струится кровь, смешиваясь с дождем."
-        show k__3 at sizee, right with dissolve1
+        show k_1r at sizee, right with dissolve1
         k "Лучше я увижу, как ты сгниешь в тюрьме."
-        hide k__3 with dissolve1
+        hide k_1r with dissolve1
         "Мы поднимаемся с земли, застыв друг напротив друга."
-        show k__1 at sizee, right with dissolve1
+        show k_1r at sizee, right with dissolve1
         k "Хватит, Бахман."
         k "Это конец."
-        hide k__1 with dissolve1
+        hide k_1r with dissolve1
         "Он медленно, почти церемониально, тянется к кобуре на бедре."
         "Щелчок предохранителя режет звуки дождя."
         scene kam_gun_loran with fade
@@ -11811,25 +11823,25 @@ label start:
         "«Бог посылает ангелов, чтобы защитить нас»."
         "Я ей верила. Пока не поняла, что ангелов не бывает. Бывают только люди. И они всегда уходят."
 
-    elif all_known == 1 and taenada <= 6 and taenada > grave and taenada > kamer and evil > 0 and end_tae == 1:
+    elif all_known == 1 and taenada <= 5 and taenada > grave and taenada > kamer and evil > 0 and end_tae == 1:
         scene memory26 with fade
         "Я давно забыла голос бабушки. Но в памяти всегда оставались ее слова."
         "«Бог посылает ангелов, чтобы защитить нас»."
         "Я ей верила. Пока не поняла, что ангелов не бывает. Бывают только люди. И они всегда уходят."
     
-    elif all_known == 1 and taenada <= 6 and taenada > grave and taenada > kamer and evil < 0 and end_tae == 1:
+    elif all_known == 1 and taenada <= 5 and taenada > grave and taenada > kamer and evil < 0 and end_tae == 1:
         scene memory26 with fade
         "Я давно забыла голос бабушки. Но в памяти всегда оставались ее слова."
         "«Бог посылает ангелов, чтобы защитить нас»."
         "Я ей верила. Пока не поняла, что ангелов не бывает. Бывают только люди. И они всегда уходят."
 
-    elif all_known == 1 and grave == 7 and evil > 0 and end_grave == 1:
+    elif all_known == 1 and grave >= 6 and evil > 0 and end_grave == 1:
         scene memory26 with fade
         "Я давно забыла голос бабушки. Но в памяти всегда оставались ее слова."
         "«Бог посылает ангелов, чтобы защитить нас»."
         "Я ей верила. Пока не поняла, что ангелов не бывает. Бывают только люди. И они всегда уходят."
     
-    elif all_known == 1 and grave == 7 and evil < 0 and end_grave == 1:
+    elif all_known == 1 and grave >= 6 and evil < 0 and end_grave == 1:
         scene memory26 with fade
         "Я давно забыла голос бабушки. Но в памяти всегда оставались ее слова."
         "«Бог посылает ангелов, чтобы защитить нас»."
