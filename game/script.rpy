@@ -2895,7 +2895,7 @@ label start:
 
     l "”Деньги…”"
 
-    scene loran_backpack with flashlight
+    scene loran_backpack with flashbulb
     scene grave2 with dissolve
     l "”Твою мать! Их нет!”"
 
@@ -4334,54 +4334,46 @@ label start:
         "Умри."
         "Умри..."
         "УМРИ!"
-        "И тут… что-то щелкает." 
-scene people_bar_horror with flashbulb
-"На секунду их лица плывут. Я вижу не людей, а сборище гниющих отродий."
-"И они шепчут одно слово."
-"Умри."
-"Умри..."
-"УМРИ!"
 
-# Бесконечно бегущая глич-строка с зашифрованным "Murderer Loran"
-python:
-    import threading
-    import time
-    _stop_glitch = False
-    
-    def glitch_loop():
-        glitch_chars = "¡¢£¤¥¦§¨©ª«¬®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĀāĂăĄąĆćĈĉĊċČčĎďĐđĒēĔĕĖėĘęĚěĜĝĞğĠġĢģĤĥĦħĨĩĪīĬĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁłŃńŅņŇňŉŊŋŌōŎŏŐőŒœŔŕŖŗŘřŚśŜŝŞşŠšŢţŤťŦŧŨũŪūŬŭŮůŰűŲųŴŵŶŷŸŹźŻżŽž"
-        while not _stop_glitch:
-            import random
-            scrambled = ''.join(random.sample(glitch_chars, len(glitch_chars)))[:30]
-            hidden = "M̷u̷r̷d̷e̷r̷e̷r̷ L̷o̷r̷a̷n̷"
-            line = scrambled + " " + hidden + " " + ''.join(random.sample(glitch_chars, len(glitch_chars)))[:30]
-            renpy.show_screen("glitch_line", text=line)
-            time.sleep(0.05)
-    
-    def start_glitch():
-        threading.Thread(target=glitch_loop, daemon=True).start()
-    
-    start_glitch()
+        # # Бесконечно бегущая глич-строка с зашифрованным "Murderer Loran"
+        # python:
+        #     import threading
+        #     import time
+        #     _stop_glitch = False
+            
+        #     def glitch_loop():
+        #         glitch_chars = "¡¢£¤¥¦§¨©ª«¬®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĀāĂăĄąĆćĈĉĊċČčĎďĐđĒēĔĕĖėĘęĚěĜĝĞğĠġĢģĤĥĦħĨĩĪīĬĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁłŃńŅņŇňŉŊŋŌōŎŏŐőŒœŔŕŖŗŘřŚśŜŝŞşŠšŢţŤťŦŧŨũŪūŬŭŮůŰűŲųŴŵŶŷŸŹźŻżŽž"
+        #         while not _stop_glitch:
+        #             import random
+        #             scrambled = ''.join(random.sample(glitch_chars, len(glitch_chars)))[:30]
+        #             hidden = "M̷u̷r̷d̷e̷r̷e̷r̷ L̷o̷r̷a̷n̷"
+        #             line = scrambled + " " + hidden + " " + ''.join(random.sample(glitch_chars, len(glitch_chars)))[:30]
+        #             renpy.show_screen("glitch_line", text=line)
+        #             time.sleep(0.05)
+            
+        #     def start_glitch():
+        #         threading.Thread(target=glitch_loop, daemon=True).start()
+            
+        #     start_glitch()
 
-screen glitch_line():
-    zorder 100
-    vbox:
-        xalign 0.5
-        yalign 0.05
-        text "[text]" size 18 color "#ff00ff" outlines [(1, "#000000", 0, 0)]
+        # screen glitch_line():
+        #     zorder 100
+        #     vbox:
+        #         xalign 0.5
+        #         yalign 0.05
+        #         text "[text]" size 18 color "#ff00ff" outlines [(1, "#000000", 0, 0)]
 
-$ renpy.pause()
-$ _stop_glitch = True
+        # $ renpy.pause()
+        # $ _stop_glitch = True
 
-#ЗВУК ШУМ БЕЛЫЙ    
         scene people_bar with fade
         "Я резко моргаю, протираю глаза тыльной стороной ладони, чувствуя, как сердце колотится где-то в горле."
         "Все исчезло. Они снова простые люди. Уставшие, мерзкие, но люди."
         "Я глубоко вздыхаю, пытаясь выдавить из легких остатки этого кошмара."
-        
+            
         l "”Это просто недосып.”"
         l "”Галлюцинации на фоне ломки и паники.”"
-        
+                
         "Но осадок остался. Я знала — они растерзают меня при первой же возможности."
 
     else:
