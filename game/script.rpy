@@ -583,6 +583,15 @@ define fictive = 0
 define dream_kam = 0
 define cops = 0
 
+transform hard_hit:
+    xalign 0.5 yalign 0.5
+    zoom 1.06
+    linear 0.04 xoffset -25 yoffset 15
+    linear 0.04 xoffset 25 yoffset -15
+    linear 0.04 xoffset -15 yoffset -10
+    linear 0.04 xoffset 15 yoffset 10
+    linear 0.04 xoffset -5 yoffset 5
+    linear 0.05 xoffset 0 yoffset 0 zoom 1.0
 
 screen car_choice():
     default hover_hint = "Что сделать?"
@@ -659,17 +668,17 @@ label start:
     play sound "hit.mp3"
     "Шум радио лупит по оголенным до предела нервам. Я не выдерживаю и бью кулаком по тускло сияющей панели."
     scene bg car hands
-    show bg car hands with hpunch
-
+    show bg car hands at hard_hit
     play sound "hit.mp3"
     "Еще."
-    show bg car hands with hpunch
+    show bg car hands at hard_hit
     play sound "hit.mp3"
     "Еще!"
-    show bg car hands with hpunch
+    show bg car hands at hard_hit
     play sound "hit.mp3"
     "ЕЩЕ!"
     stop audio fadeout 1.0
+    scene bg car with fade
     play sound "road.mp3" fadein 1.5
 
     "Я давлю всхлипы, чувствуя, как предательские слезы подступают к глазам."
