@@ -514,7 +514,22 @@ image judge = im.Scale("judge.png", config.screen_width, config.screen_height)
 image tae_1 = im.Scale("tae_1.png", config.screen_width, config.screen_height)
 image tae_2 = im.Scale("tae_2.png", config.screen_width, config.screen_height)
 image tae_3 = im.Scale("tae_3.png", config.screen_width, config.screen_height)
-
+image welcome = "welcome.png"
+image welcome = im.Scale("welcome.png", config.screen_width, config.screen_height)
+image bg car2 = "bg car2.png"
+image bg car2 = im.Scale("bg car2.png", config.screen_width, config.screen_height)
+image eyes3 = "eyes3.png"
+image eyes3 = im.Scale("eyes3.png", config.screen_width, config.screen_height)
+image eyes2 = "eyes2.png"
+image eyes2 = im.Scale("eyes2.png", config.screen_width, config.screen_height)
+image eyes1 = "eyes1.png"
+image eyes1 = im.Scale("eyes1.png", config.screen_width, config.screen_height)
+image bg car hands = "bg car hands.png"
+image bg car hands = im.Scale("bg car hands.png", config.screen_width, config.screen_height)
+image bg car cross = "bg car cross.png"
+image bg car cross = im.Scale("bg car cross.png", config.screen_width, config.screen_height)
+image bg car backpack = "bg car backpack.png"
+image bg car backpack = im.Scale("bg car backpack.png", config.screen_width, config.screen_height)
 
 define dissolve1 = Dissolve(0.2)
 
@@ -601,7 +616,7 @@ label start:
     scene 4
     pause
 
-    scene bg car with fade
+    scene bg car2 with fade
     play sound "road.mp3" fadein 1.5
     play music "backgroundstart.mp3"  volume 0.5 fadein 1.5 fadeout 3.5
     play audio "radio.mp3" fadeout 1.0  fadein 1.5
@@ -612,6 +627,7 @@ label start:
     "«Пути Господни неисповедимы», — любила повторять мать. Удобная фраза."
     "Особенно когда никто понятия не имеет, что, черт возьми, происходит."
     
+    scene bg car with fade
     l "”Все хорошо.”"
     l "”Я далеко...”"
     l "”До Сиэтла осталось всего-ничего.”"
@@ -717,26 +733,30 @@ label start:
     "Скулы сводит от того, как сильно и долго я стискиваю зубы. Нога опять почти прирастает к педали газа"
     "Мышцы {i}ужасно{i} затекли, а вымотанный нервами мозг требует одного — отключиться прямо на руле."
     "Веки тяжелеют с каждой минутой. Я несколько раз резко моргаю, пытаясь прогнать сонливость, но дорога все настойчивее расплывается перед глазами."
-
+    scene bg car with fade
     l "”Еще не хватало уснуть за рулем.”"
     "Решив не рисковать, я съезжаю на обочину, чтобы прийти в себя."
     "Лучший способ разбудить мозг вспоминается сразу — я начинаю тихо бормотать старую считалочку. Кажется, когда-то ее рассказывала мать."
     "Или бабушка."
     "Черт знает."
-    #катсцены глаз и пальцев"
+    scene eyes2 with fade
     l "”Раз — Господь зажжет свечу.”"
+    scene eyes3 with fade
     l "”Два — я к ангелам лечу.”"
+    scene bg car hands with fade
     l "”Три — закрою крепко дверь.”"
+    scene bg car cross with fade
     l "”Четыре — не впускай потерь.”"
+    scene bg car backpack  with fade
     l "”Пять — не бойся темноты.”"
+    scene eyes2 with fade
     l "”Шесть — не верь тому, кто ты.”"
-    #кат глаза в бок
+    scene eyes1 with fade
     l "”Семь — когда погаснет свет,”"
-    #кат мемори стоун табличка
+    scene welcome with fade
     l "”Бог не вспомнит, где ты есть.”"
     "Последние слова застревают на языке. Я сама не понимаю, почему от этой дурацкой присказки становится не по себе."
-    l "”Мемори Стоун...”"
-    #кат мемори стоун табличка
+    "Добро пожаловать в Мемори Стоун."
 
     scene bg motel1 with fade
     play sound "engine.mp3" 
