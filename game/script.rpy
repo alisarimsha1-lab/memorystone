@@ -583,6 +583,28 @@ define fictive = 0
 define dream_kam = 0
 define cops = 0
 
+
+screen car_choice():
+    default hover_hint = "Что сделать?"
+
+    add Transform("bg car.png", xysize=(config.screen_width, config.screen_height))
+
+    imagebutton:
+        idle Transform("hands_idle.png", xysize=(config.screen_width, config.screen_height))
+        hover Transform("hands_hover.png", xysize=(config.screen_width, config.screen_height))
+        focus_mask True
+        hovered SetScreenVariable("hover_hint", "Сжать руль")
+        unhovered SetScreenVariable("hover_hint", "Что сделать?")
+        action Return("tie")
+
+    if hover_hint != "":
+        text "[hover_hint]":
+            xalign 0.5
+            yalign 0.85
+            size 42
+            color "#a8d8ff"
+            outlines [(2, "#05101a", 0, 0)]
+
 label start:
     $ evil = 0
     $ flashbulb = Fade(0.2, 0.0, 0.8, color='#fff')
@@ -660,6 +682,11 @@ label start:
     l "”Дурь в голову ударила, да?!”"
 
     "Бью ладонями по рулю, пытаясь заглушить внутренний крик, и машина слегка виляет на пустой дороге."
+    call screen car_choice
+
+    if _return == "tie":
+        "Вы сжимаете руль и выжимаете сцепление..."
+    
     
     menu:
         "Сжать руль.":
