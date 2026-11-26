@@ -530,6 +530,7 @@ image bg car cross = "bg car cross.png"
 image bg car cross = Transform("bg car cross.png", size=(config.screen_width, config.screen_height))
 image bg car backpack = "bg car backpack.png"
 image bg car backpack = Transform("bg car backpack.png", size=(config.screen_width, config.screen_height))
+image bg car hands1 = Transform("bg car hands1.png", size=(config.screen_width, config.screen_height))
 
 define dissolve1 = Dissolve(0.2)
 
@@ -667,14 +668,14 @@ label start:
     
     play sound "hit.mp3"
     "Шум радио лупит по оголенным до предела нервам. Я не выдерживаю и бью кулаком по тускло сияющей панели."
-    scene bg car hands
-    show bg car hands at hard_hit
+    scene bg car hands1
+    show bg car hands1 at hard_hit
     play sound "hit.mp3"
     "Еще."
-    show bg car hands at hard_hit
+    show bg car hands1 at hard_hit
     play sound "hit.mp3"
     "Еще!"
-    show bg car hands at hard_hit
+    show bg car hands1 at hard_hit
     play sound "hit.mp3"
     "ЕЩЕ!"
     stop audio fadeout 1.0
@@ -714,7 +715,7 @@ label start:
     
     "Рука непроизвольно тянется к рюкзаку на соседнем сиденьи."
     "И в этот самый миг из тьмы, прямо под колеса, бросается мутный силуэт."
-    #звук
+    play sound "rabbit.mp3" fadein 3.0
     "Глухой удар."
     "Машину коротко встряхивает, руль дергается в руках, а по кузову прокатывается неприятная дрожь."
     "Я резко отпускаю газ и инстинктивно вцепляюсь в руль, пытаясь удержать машину на полосе."
@@ -9683,7 +9684,7 @@ label start:
         "Я отодвигаю крышку и делаю глоток прямо из горлышка. Острая, цветочная горечь обжигает горло."
         "В нижнем ящике его рабочего стола, под папками с текущими делами, лежит досье на меня."
         "Я листаю его. Сухие факты, которые можно было накопать за день. Но зачем ему держать это здесь, а не в участке?"
-        show loran_black2 at ssssss, left with dissolve1
+        show loran_black2 at halfsize, left with dissolve1
         l "”Он не доверяет своим? Или просто хочет держать меня ближе, чем позволяет протокол?”"
         hide loran_black2 with dissolve1
         "Под досье я нахожу письма. Конверты с гербом Сиэтла."
@@ -9697,7 +9698,7 @@ label start:
         "Витамины, пластыри, а рядом — препарат «Ситалопрам». Сильный, по рецепту."
         "Мы толкали такой обсессивно-компульсивным придуркам за тридорого."
         "Под упаковкой лежит справка от частного психиатра из Сиэтла с рекомендацией «избегать триггерных сред»."
-        show loran_black2 at ssssss, left with dissolve1
+        show loran_black2 at halfsize, left with dissolve1
         l "”Значит этот перфекционизм и брезгливость не просто так. Это диагноз.”"
         hide loran_black2 with dissolve1
         scene cam_room with fade
@@ -9711,7 +9712,7 @@ label start:
         #КАТ
         "Нахожу еще одно фото. Футбольная команда средней школы, подростки в одинаковой форме, и пара симаптичных чирлидерш."
         "На стене, за их спинами, кричащая растяжка: «Школа Мемори Стоун»."
-        show loran_black7 at ssssss, left with dissolve1
+        show loran_black7 at halfsize, left with dissolve1
         l "”Он вырос здесь...”"
         hide loran_black7 with dissolve1
         "В самом нижнем, запертом ящике шкафа, который я вскрываю скрепкой, лежит папка. В ней архитектурные планы этого дома. Но это не оригиналы. Это его собственные чертежи, исчерченные красной пастой, как раны."
@@ -9770,7 +9771,7 @@ label start:
 
         scene broken_tv with fade
         "Я останавливаюсь посреди комнаты, тяжело дыша. Смотрю на сломанные кости его прошлой жизни."
-        show loran_black7 at ssssss, left with dissolve1
+        show loran_black7 at halfsize, left with dissolve1
         l "”Вот начало твоей планировки.”"
         hide loran_black7 with dissolve1
         "Я делаю последний глоток из бутылки и оставляю ее стоять посреди хаоса. Я не скрою следы. Пусть придет. Пусть увидит."
@@ -9797,23 +9798,23 @@ label start:
         play sound "water_pouring3.mp3"
         "Беру бокал, которые я оставила заранее и разливаю остатки бурбона."
         "Я театрально протягиваю ему напиток."
-        show loran_black5 at ssssss, left with dissolve1
+        show loran_black5 at halfsize, left with dissolve1
         l "Выпьете со мной, мистер Рид? За наше общее сумасшествие?"
         hide loran_black5 with dissolve1
         "Он смотрит на меня молча, будто анализируя, многое ли я нашла."
-        show loran_black5 at ssssss, left with dissolve1
+        show loran_black5 at halfsize, left with dissolve1
         l "Будете дальше скрываться?"
         hide loran_black5 with dissolve1
         show k3 at almostsize, right with dissolve1
         k "..."
         hide k3 with dissolve1
         "Медленно, на ватных ногах, я подхожу к нему."
-        show loran_black1 at ssssss, left with dissolve1
+        show loran_black1 at halfsize, left with dissolve1
         l "Или наконец признаете то, что чувствуете ко мне?"
         l "Признаете, что ваша крепость пала... и вам интересно, что будет дальше?"
         hide loran_black1 with dissolve1
         "Я останавливаюсь на расстоянии вытянутой руки и смотрю прямо в его глаза."
-        show loran_black3 at ssssss, left with dissolve1
+        show loran_black3 at halfsize, left with dissolve1
         l "”Не смей отталкивать меня.”"
         hide loran_black3 with dissolve1
         "Он смотрит на протянутый алкоголь, затем поднимает взгляд на меня."
@@ -9828,7 +9829,7 @@ label start:
         k "Это... лестно."
         hide k1 with dissolve1
         "Я делаю шаг назад, играя в его игру."
-        show loran_black5 at ssssss, left with dissolve1
+        show loran_black5 at halfsize, left with dissolve1
         l "Лесть? Выглядит так, будто тебе нравится, когда твою святыню оскверняют."
         hide loran_black5 with dissolve1
         "Он парирует, делая шаг вперед. Расстояние между нами снова сокращается."
@@ -9839,7 +9840,7 @@ label start:
         hide k1 with dissolve1
         "Еще шаг."
         "Чувствую твердый стол своим бедром."
-        show loran_black1 at ssssss, left with dissolve1
+        show loran_black1 at halfsize, left with dissolve1
         l "Какую же? Что я — достойный соперник, а не просто подозреваемая?"
         l "Или очередная кассета в пыльной коробке?"
         hide loran_black1 with dissolve1
@@ -9852,11 +9853,11 @@ label start:
         "Я чувствую, как теряю контроль над ситуацией. Он разъедает мою ярость."
         "Но я решаю нанести последний, отчаянный удар."
         "Я касаюсь его галстука и слегка тяну на себя."
-        show loran_black5 at ssssss, left with dissolve1
+        show loran_black5 at halfsize, left with dissolve1
         l "Знаешь, что я еще доказала? Что ты боишься меня. Не как детектив. А как мужчина."
         hide loran_black5 with dissolve1
         "Я протягиваю руку, чтобы взять его бокал со стола."
-        show loran_black5 at ssssss, left with dissolve1
+        show loran_black5 at halfsize, left with dissolve1
         l "И сейчас ты боишься, что я выпью из твоего бокала. Потому что это будет интимнее, чем все, что было до этого."
         hide loran_black5 with dissolve1
         "Мои пальцы почти касаются хрусталя."
@@ -9889,7 +9890,7 @@ label start:
         hide k_toe with dissolve1
         "Я лишь прыснула."
         play sound "prisnula.mp3"
-        show loran_black6 at ssssss, left with dissolve1
+        show loran_black6 at halfsize, left with dissolve1
         l "Пф..."
         hide loran_black6 with dissolve1
         scene kam_kiss_sex with fade
@@ -9976,7 +9977,7 @@ label start:
         hide k_naked with dissolve1
         "Его голос, хриплый от сна, заставляет меня замереть на месте. Я оборачиваюсь."
         "Он стоит в дверном проеме в спальню, в брюках, с обнаженным торсом. Утренний свет подчеркивает рельеф его мышц, а на коже у ключицы проступают легкие, едва заметные синяки."
-        show loran_black1 at ssssss, left with dissolve1
+        show loran_black1 at halfsize, left with dissolve1
         l "Я хотела покурить."
         hide loran_black1 with dissolve1
         "Его взгляд на мгновение скользит к моему рюкзаку, валявшемуся в углу."
@@ -9985,7 +9986,7 @@ label start:
         k "Будешь кофе?"
         hide k_naked with dissolve1
         "Вопрос повисает в воздухе. Такой простой и бытовой, и от этого сбивающий с толку."
-        show loran_black1 at ssssss, left with dissolve1
+        show loran_black1 at halfsize, left with dissolve1
         l "Да. Без сахара."
         hide loran_black1 with dissolve1
         "Я все еще стою у двери, наблюдая за ним. Он оборачивается, и уголок его губ дрогает."
@@ -10272,7 +10273,7 @@ label start:
         k "Лоран, ты здесь? Что случилось?"
         hide k__4 with dissolve1
         "Я срываюсь с кровати. Каждый вздох давит на легкие."
-        show loran_black4 at ssssss, left with dissolve1
+        show loran_black4 at halfsize, left with dissolve1
         l "Мне... мне нужно уйти."
         hide loran_black4 with dissolve1
         "Мой голос звучит чужим эхом в собственной голове. Плоским. Мертвым."
@@ -10281,7 +10282,7 @@ label start:
         hide k__4 with dissolve1
         "Кэмерон приближается. Я вижу лишь тень от лезвия, падающую на его черты."
         "Собственную тень."
-        show loran_black4 at ssssss, left with dissolve1
+        show loran_black4 at halfsize, left with dissolve1
         l "Нет! Кэмерон, отойди!"
         hide loran_black4 with dissolve1
         "Я отшатываюсь, выставляя руки, как щит. Не для своей защиты. Для его. Чтобы он не почувствовал ту дрожь невыносимой правды, что выжигает меня изнутри."
@@ -10819,7 +10820,7 @@ label start:
         "Я открываю крышку и делаю глоток прямо из горлышка. Острая, цветочная горечь обжигает горло."
         "В нижнем ящике его рабочего стола, под папками с текущими делами, лежит досье на меня."
         "Я листаю его. Сухие факты, которые можно было накопать за день. Но зачем ему держать это здесь, а не в участке?"
-        show loran_black2 at ssssss, left with dissolve1
+        show loran_black2 at halfsize, left with dissolve1
         l "”Он не доверяет своим? Или просто хочет держать меня ближе, чем позволяет протокол?”"
         hide loran_black2 with dissolve1
         "Под досье я нахожу письма. Конверты с гербом Сиэтла."
@@ -10833,7 +10834,7 @@ label start:
         "Витамины, пластыри, а рядом — препарат «Ситалопрам». Сильный, по рецепту."
         "Мы толкали такой обсессивно-компульсивным придуркам за тридорого."
         "Под упаковкой лежит справка от частного психиатра из Сиэтла с рекомендацией «избегать триггерных сред»."
-        show loran_black2 at ssssss, left with dissolve1
+        show loran_black2 at halfsize, left with dissolve1
         l "”Значит этот перфекционизм и брезгливость не просто так. Это диагноз.”"
         hide loran_black2 with dissolve1
         scene cam_room with fade
@@ -10846,7 +10847,7 @@ label start:
         "Я переворачиваю фотографию и вижу дату. 20.07.1978 год."
         #КАТ
         "Нахожу еще одно фото. Класс младшей школы, дети в одинаковых футболках. И на стене, за их спинами, кричащая растяжка: «Школа Мемори Стоун»."
-        show loran_black7 at ssssss, left with dissolve1
+        show loran_black7 at halfsize, left with dissolve1
         l "”Он вырос здесь...”"
         hide loran_black7 with dissolve1
         "В самом нижнем, запертом ящике шкафа, который я вскрываю скрепкой, лежит папка. В ней архитектурные планы этого дома. Но это не оригиналы. Это его собственные чертежи, исчерченные красной пастой, как раны."
@@ -10903,7 +10904,7 @@ label start:
 
         scene broken_tv with fade
         "Я останавливаюсь посреди комнаты, тяжело дыша. Смотрю на сломанные кости его прошлой жизни."
-        show loran_black7 at ssssss, left with dissolve1
+        show loran_black7 at halfsize, left with dissolve1
         l "”Вот начало твоей планировки.”"
         hide loran_black7 with dissolve1
         "Я делаю последний глоток из бутылки и оставляю ее стоять посреди хаоса. Я не скрою следы. Пусть придет. Пусть увидит."
@@ -10925,7 +10926,7 @@ label start:
         "Я встаю со своего места и обхожу его, подходя к бутылке, которая осталась на кухонном столе."
         "Беру бокал, которые я оставила заранее и разливаю остатки джина."
         "Я театрально протягиваю ему напиток."
-        show loran_black5 at ssssss, left with dissolve1
+        show loran_black5 at halfsize, left with dissolve1
         l "Выпьете со мной, мистер Рид? За наше общее сумасшествие?"
         hide loran_black5 with dissolve1
         "Он смотрит на меня молча, будто анализируя, многое ли я нашла."
@@ -10935,12 +10936,12 @@ label start:
         k "..."
         hide k3 with dissolve1
         "Медленно, на ватных ногах, я подхожу к нему."
-        show loran_black1 at ssssss, left with dissolve1
+        show loran_black1 at halfsize, left with dissolve1
         l "Или наконец признаете то, что чувствуете ко мне?"
         l "Признаете, что ваша крепость пала... и вам интересно, что будет дальше?"
         hide loran_black1 with dissolve1
         "Я останавливаюсь на расстоянии вытянутой руки и смотрю прямо в его глаза."
-        show loran_black3 at ssssss, left with dissolve1
+        show loran_black3 at halfsize, left with dissolve1
         l "”Не смей отталкивать меня.”"
         hide loran_black3 with dissolve1
         "Он смотрит на протянутый алкоголь, затем поднимает взгляд на меня."
@@ -10955,7 +10956,7 @@ label start:
         k "Это... лестно."
         hide k5 with dissolve1
         "Я делаю шаг назад, играя в его игру."
-        show loran_black5 at ssssss, left with dissolve1
+        show loran_black5 at halfsize, left with dissolve1
         l "Лесть? Выглядит так, будто тебе нравится, когда твою святыню оскверняют."
         hide loran_black5 with dissolve1
         "Он парирует, делая шаг вперед. Расстояние между нами снова сокращается."
@@ -10966,7 +10967,7 @@ label start:
         hide k1 with dissolve1
         "Еще шаг."
         "Чувствую твердый стол своим бедром."
-        show loran_black1 at ssssss, left with dissolve1
+        show loran_black1 at halfsize, left with dissolve1
         l "Какую же? Что я — достойный соперник, а не просто подозреваемая?"
         l "Или просто очередная кассета в пыльной коробке?"
         hide loran_black1 with dissolve1
@@ -10979,11 +10980,11 @@ label start:
         "Я чувствую, как теряю контроль над ситуацией. Он разъедает мою ярость."
         "Но я решаю нанести последний, отчаянный удар."
         "Я касаюсь его галстука и слегка тяну на себя."
-        show loran_black5 at ssssss, left with dissolve1
+        show loran_black5 at halfsize, left with dissolve1
         l "Знаешь, что я еще доказала? Что ты боишься меня. Не как детектив. А как мужчина."
         hide loran_black5 with dissolve1
         "Я протягиваю руку, чтобы взять его бокал со стола."
-        show loran_black5 at ssssss, left with dissolve1
+        show loran_black5 at halfsize, left with dissolve1
         l "И сейчас ты боишься, что я выпью из твоего бокала. Потому что это будет интимнее, чем все, что было до этого."
         hide loran_black5 with dissolve1
         "Мои пальцы почти касаются хрусталя."
@@ -11014,7 +11015,7 @@ label start:
         k "Не торопись, змея."
         hide k_toe with dissolve1
         "Я лишь прыснула."
-        show loran_black5 at ssssss, left with dissolve1
+        show loran_black5 at halfsize, left with dissolve1
         l "Пф..."
         hide loran_black5 with dissolve1
         scene kam_kiss_sex with fade
@@ -11099,7 +11100,7 @@ label start:
         hide k_naked with dissolve1
         "Его голос, хриплый от сна, заставляет меня замереть на месте. Я оборачиваюсь."
         "Он стоит в дверном проеме в спальню, в брюках, с обнаженным торсом. Утренний свет подчеркивает рельеф его мышц, а на коже у ключицы проступают легкие, едва заметные синяки."
-        show loran_black1 at ssssss, left with dissolve1
+        show loran_black1 at halfsize, left with dissolve1
         l "Я хотела покурить."
         hide loran_black1 with dissolve1
         "Его взгляд на мгновение скользит к моему рюкзаку, валявшемуся в углу."
@@ -11108,7 +11109,7 @@ label start:
         k "Будешь кофе?"
         hide k_naked with dissolve1
         "Вопрос повисает в воздухе. Такой простой и бытовой, и от этого сбивающий с толку. Я замешкалась."
-        show loran_black1 at ssssss, left with dissolve1
+        show loran_black1 at halfsize, left with dissolve1
         l "Да. Без сахара."
         hide loran_black1 with dissolve1
         "Я все еще стою у двери, наблюдая за ним. Он оборачивается, и уголок его губ дрогнул."
@@ -11405,7 +11406,7 @@ label start:
         k "Лоран, ты здесь? Что случилось?"
         hide k__4 with dissolve1
         "Я срываюсь с кровати. Каждый вздох давит на легкие."
-        show loran_black1 at ssssss, left with dissolve1
+        show loran_black1 at halfsize, left with dissolve1
         l "Мне... мне нужно уйти."
         hide loran_black1 with dissolve1
         "Мой голос звучит чужим эхом в собственной голове. Плоским. Мертвым."
@@ -11414,7 +11415,7 @@ label start:
         hide k__2 with dissolve1
         "Кэмерон приближается. Я вижу лишь тень от лезвия, падающую на его черты."
         "Собственную тень."
-        show loran_black4 at ssssss, left with dissolve1
+        show loran_black4 at halfsize, left with dissolve1
         l "Нет! Кэмерон, отойди!"
         hide loran_black4 with dissolve1
         "Я отшатываюсь, выставляя руки, как щит. Не для своей защиты. Для его. Чтобы он не почувствовал ту дрожь невыносимой правды, что выжигает меня изнутри."
