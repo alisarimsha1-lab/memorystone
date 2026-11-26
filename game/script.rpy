@@ -531,6 +531,10 @@ image bg car cross = Transform("bg car cross.png", size=(config.screen_width, co
 image bg car backpack = "bg car backpack.png"
 image bg car backpack = Transform("bg car backpack.png", size=(config.screen_width, config.screen_height))
 image bg car hands1 = Transform("bg car hands1.png", size=(config.screen_width, config.screen_height))
+image painting = Transform("painting.png", size=(config.screen_width, config.screen_height))
+image police3 = Transform("police3.png", size=(config.screen_width, config.screen_height))
+image police5 = Transform("police5.png", size=(config.screen_width, config.screen_height))
+image radio = Transform("radio.png", size=(config.screen_width, config.screen_height))
 
 define dissolve1 = Dissolve(0.2)
 
@@ -1180,12 +1184,11 @@ label start:
     l "”Наверное...”"
     stop music fadeout 2.0
     play music "police_back.mp3" volume 0.5 fadein 1.5 fadeout 1.5
-    #переделать кат
     scene car_motel with fade
 
     "Густой туман пожирает все вокруг, оставляя лишь пятно дороги перед капотом." 
     l "”Наконец-то я покину это вонючее местечко.”"
-    #катсцена радио
+    scene radio with fade
     "Из динамиков внезапно доносится шипение, а следом — бодрая мелодия заставки. Кажется, радио наконец решило подать признаки жизни."
     "Ведущий" "Доброе утро, Сиэтл! Вы слушаете K-FOX, и у микрофона снова ваш любимый ведущий Марк Хендерсон!"
     "Ведущий" "Надеюсь, вы успели насладиться сегодняшним затишьем, потому что, судя по последним сводкам, оно долго не продлится."
@@ -1218,7 +1221,7 @@ label start:
         "”Нужно тщательно подобрать слова... Или нет?”"
         "Быть учтивой.":
             $ evil -= 1
-
+            scene police5 with fade
             "Раздражение подкатывает к горлу, но я подавляю его, растянув губы в абсолютно не искренней улыбке."
             l "Доброго дня, офицер. Путешествую. Останавливалась в мотеле передохнуть."
 
@@ -1228,13 +1231,14 @@ label start:
             
             "Раздражение подкатывает к горлу, и я не собираюсь подавлять его."
             l "А кто спрашивает?"
-            #сделать кат негритоска худая и на документе жирная ой наоборот
-            "Офицер, не обращая внимания на мой тон, достает удостоверение и раскрывает передо мной."
+            scene police3 with fade
+            "Офицер, не обращая внимания на мой тон, достает удостоверение и протягивает передо мной."
             m1 "Офицер Уокер, полицейское управление Мемори Стоун."
             "Я смотрю на документ, внимательно изучая фотографию."
             "Перевожу вгляд то на женщину, то на ксиву. Щурюсь, пытаясь обнаружить сходство."
             l "Не похожи."
-            "Уокер с явным раздражением захлопывает удоствоверние и убирает его в карман."
+            "Уокер с явным раздражением одергивает руку и убирает бейджик в карман."
+    scene police2 with fade
     m1 "Что за кровь на номерах?"
     l "”Кровь?”"
     "Мой взгляд автоматически устремляется на второго офицера, который рассматривает номерной знак."
